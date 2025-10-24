@@ -27,7 +27,7 @@ public class BookController {
         }
     }
 
-    // Para API REST - Buscar livros salvos
+    // para buscar livros salvos
     public String getSavedBooksApi() {
         try {
             List<Book> savedBooks = repository.findAll();
@@ -40,7 +40,7 @@ public class BookController {
         }
     }
 
-    // para salvar livro
+    // para salvar os livros
     public String saveBookApi(String bookJson) {
         try {
             Book book = mapper.readValue(bookJson, Book.class);

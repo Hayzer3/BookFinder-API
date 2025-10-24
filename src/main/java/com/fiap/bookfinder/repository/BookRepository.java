@@ -54,7 +54,7 @@ public class BookRepository {
             // tabela já existe
         }
     }
-    // NO BookRepository.java - ADICIONE:
+
     public boolean deleteById(int id) {
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
             String sql = "DELETE FROM books WHERE id = ?";

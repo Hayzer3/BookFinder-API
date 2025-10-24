@@ -11,7 +11,6 @@ public class Book {
         this.publishedDate = publishedDate;
     }
 
-    // Construtor vazio (importante para o Jackson)
     public Book() {}
 
     public String getTitle() { return title; }
