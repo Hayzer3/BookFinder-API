@@ -7,8 +7,8 @@ import java.util.List;
 
 public class BookRepository {
     private final String url = "jdbc:oracle:thin:@//oracle.fiap.com.br:1521/orcl";
-    private final String user = "rm566503";
-    private final String password = "201004";
+    private final String user = "usuario";
+    private final String password = "senha";
 
     public void save(Book book) {
         try (Connection conn = DriverManager.getConnection(url, user, password)) {
