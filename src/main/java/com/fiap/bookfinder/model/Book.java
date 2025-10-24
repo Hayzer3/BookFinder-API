@@ -1,37 +1,30 @@
 package com.fiap.bookfinder.model;
 
 public class Book {
-    private String id;
     private String title;
-    private String author;
-    private String description;
-    private String thumbnail;
+    private String authors;
+    private String publishedDate;
 
-    // Construtor vazio
-    public Book() {}
-
-    // Construtor com parâmetros
-    public Book(String id, String title, String author, String description, String thumbnail) {
-        this.id = id;
+    public Book(String title, String authors, String publishedDate) {
         this.title = title;
-        this.author = author;
-        this.description = description;
-        this.thumbnail = thumbnail;
+        this.authors = authors;
+        this.publishedDate = publishedDate;
     }
 
-    // Getters e Setters
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    // Construtor vazio (importante para o Jackson)
+    public Book() {}
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
-    public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
+    public String getAuthors() { return authors; }
+    public void setAuthors(String authors) { this.authors = authors; }
 
-    public String getDescription() { return description; }
-    public void setDescription(String description) { this.description = description; }
+    public String getPublishedDate() { return publishedDate; }
+    public void setPublishedDate(String publishedDate) { this.publishedDate = publishedDate; }
 
-    public String getThumbnail() { return thumbnail; }
-    public void setThumbnail(String thumbnail) { this.thumbnail = thumbnail; }
+    @Override
+    public String toString() {
+        return "Livro: " + title + " | Autor: " + authors + " | Data: " + publishedDate;
+    }
 }
